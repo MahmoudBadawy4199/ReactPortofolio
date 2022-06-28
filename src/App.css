@@ -3,17 +3,3 @@
     font-size: 24px;
 }
 
-.counter__container{
-    text-align: center;
-}
-.counter__container button{
-    margin: 20px;
-    background-color: lavender;
-    padding: 1rem 4rem;
-    font-size: 2rem;
-    border-color: purple;
-    border-radius: 2rem;
-}
-.counter__container p{
-    font-size: 3rem;
-}
