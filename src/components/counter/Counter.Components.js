@@ -1,8 +1,8 @@
 import React from "react";
 import {useState} from 'react';
-import './counter.css'
+import './Counter.Component.css'
 
-function Counter() {
+function CounterComponent() {
     const [counter, setCounter] = useState(0);
     const inc = () => {
         setCounter(counter + 1);
@@ -25,4 +25,4 @@ function Counter() {
 }
 
 
-export default Counter;
+export default CounterComponent;
