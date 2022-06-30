@@ -5,7 +5,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavbarComponent from './components/navbar/Navbar.Component';
 import ShopPage from './pages/shop/shop.page';
 import ProductSubpage from './pages/shop/product.Subpage/product.Subpage';
-import NotFoundPage from './pages/not_found/not_found.Page';
+import NotFoundPage from './pages/not_found/not_found.page';
+import TodoPage from './pages/todo/todo.page';
+
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
                 <Route path='/shop' element={<ShopPage />} />
                 <Route path='/product/:id' element={<ProductSubpage />} />
                 <Route path='/counter' element={<CounterPage />} />
+                <Route path='/todo' element={<TodoPage />} />
+
                 <Route path='*' element={<NotFoundPage />} />
             </Routes>
 
