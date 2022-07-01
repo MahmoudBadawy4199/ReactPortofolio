@@ -1,8 +1,8 @@
 import TodoListComponent from "../../components/todo/TodoList.Component";
 import TodoFormComponent from "../../components/todo/TodoForm.Component";
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodoAction,deleteTodoAction } from "../../redux";
-
+import { addTodo,deleteTodo } from "../../redux/features/todoSlice";
+// import { addTodoAction,deleteTodoAction } from "../../redux/config"; old redux
 
 import './todo.page.css';
 function TodoPage() {
@@ -10,18 +10,21 @@ function TodoPage() {
   const todos = useSelector(state => state.todos);
   const dispatch = useDispatch();
 
-  const addTodo = (task) => {
-    dispatch(addTodoAction(task));
+  const onAddTodo = (task) => {
+    // dispatch(addTodoAction(task));  old redux
+    dispatch(addTodo(task));
   };
 
-  const deleteTodo = (index) => {
-    dispatch(deleteTodoAction(index));
+  const onDeleteTodo = (index) => {
+    // dispatch(deleteTodoAction(index)); old redux
+    dispatch(deleteTodo(index));
+
   }
 
   return (
     <div className="text-center py-2 todo-wrapper container">
-      <TodoFormComponent addTodo={addTodo} />
-      <TodoListComponent todos={todos} deleteTodo={deleteTodo} />
+      <TodoFormComponent addTodo={onAddTodo} />
+      <TodoListComponent todos={todos} deleteTodo={onDeleteTodo} />
     </div>
   );
 }

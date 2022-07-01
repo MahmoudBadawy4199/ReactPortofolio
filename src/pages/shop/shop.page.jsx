@@ -1,30 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import {useDispatch,useSelector} from 'react-redux'
+import {fetchProducts} from '../../redux/features/shopSlice'
 
 const ShopPage = () => {
 
+    const dispatch = useDispatch();
 
     // Effects
     useEffect(() => {
-        fetchData();
+        dispatch(fetchProducts());
     }, [])
 
-
-    // States
-    const [products, setProducts] = useState([]);
-
-    // Functions
-    const fetchData = () => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(json => setProducts(json))
-    }
-
-
-
-
-
+    // Selectors
+    const products = useSelector(state => state.shop.products);
+    const loading = useSelector(state => state.shop.loading);
 
     // UI
     return (
@@ -33,7 +24,7 @@ const ShopPage = () => {
                 <h1 className="my-3">Shop</h1>
 
                 {
-                    products.length > 0 ? (
+                   !loading ? (
 
                         <div className="products">
                             {
