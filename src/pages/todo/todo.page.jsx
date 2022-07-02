@@ -7,7 +7,7 @@ import { addTodo,deleteTodo } from "../../redux/features/todoSlice";
 import './todo.page.css';
 function TodoPage() {
 
-  const todos = useSelector(state => state.todos);
+  const todos = useSelector(state => state.todos.todos);
   const dispatch = useDispatch();
 
   const onAddTodo = (task) => {
