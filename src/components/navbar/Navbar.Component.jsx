@@ -16,6 +16,8 @@ function NavbarComponent() {
                     <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
                     <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
                     <Nav.Link as={Link} to="/todo">Todo</Nav.Link>
+                    <Nav.Link as={Link} to="/register">Signup</Nav.Link>
+
                 </Nav>
             </Container>
         </Navbar>

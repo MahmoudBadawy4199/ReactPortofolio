@@ -7,6 +7,7 @@ import ShopPage from './pages/shop/shop.page';
 import ProductSubpage from './pages/shop/product.Subpage/product.Subpage';
 import NotFoundPage from './pages/not_found/not_found.page';
 import TodoPage from './pages/todo/todo.page';
+import SignUp from './pages/signup';
 
 
 
@@ -23,6 +24,8 @@ function App() {
                 <Route path='/product/:id' element={<ProductSubpage />} />
                 <Route path='/counter' element={<CounterPage />} />
                 <Route path='/todo' element={<TodoPage />} />
+                <Route path='/register' element={<SignUp />} />
+
 
                 <Route path='*' element={<NotFoundPage />} />
             </Routes>
