@@ -1,7 +1,56 @@
+$color-main: #FFF9F9;
+$color-secondary: #d9e7ff;
 
-
-
-p{
+* {
     font-family: 'Montserrat';
     color: black;
 }
+
+span {
+    font-size: 2rem;
+}
+
+section {
+    padding: 100px 0;
+    background: linear-gradient(90deg, $color-main 0%, $color-secondary 100%);
+}
+
+.hero__wrapper {
+
+    p {
+        font-size: 0.9rem;
+    }
+
+   
+    figure {
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: 0% 20%;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            border-radius: 20%;
+        }
+    }
+}
+.line {
+    width: 50px;
+    height: 1px;
+    margin: 0 20px;
+    background-color: black;
+    display: inline;
+}
+
+
+.nav-tabs .nav-link {
+    background-color: transparent !important;
+    color: black !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  
+  .nav-tabs .nav-link.active {
+    border-bottom: solid 4px black !important;
+  }
+  
