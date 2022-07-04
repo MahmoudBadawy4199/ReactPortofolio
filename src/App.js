@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavbarComponent from './components/navbar/Navbar.Component';
 import ShopPage from './pages/shop/shop.page';
 import ProductSubpage from './pages/shop/product.Subpage/product.Subpage';
-import NotFoundPage from './pages/not_found/not_found.page';
+import NotFoundPage from './pages/not_found/not_found.Page';
 import TodoPage from './pages/todo/todo.page';
 import SignUp from './pages/signup';
 
