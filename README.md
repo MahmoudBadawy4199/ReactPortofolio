@@ -4,4 +4,5 @@
 29/6/2022: => Some Ui + React Routing + Api Calling  
 30/6/2022: => React Redux + Todo App  
 1/7/2022: => Refactoring Todo App Using React Redux-Toolkit  
-2/7/2022: => creating a signup form with React-Hooks,React-Select
+2/7/2022: => Creating a signup form with React-Hooks,React-Select  
+3,4/7/2022 => Creating Homepage Ui, Refactoring Components & Navbar
