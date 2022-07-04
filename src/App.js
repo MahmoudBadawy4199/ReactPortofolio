@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import CounterPage from './pages/counter/counter.page';
 import HomePage from './pages/home/home.page';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
