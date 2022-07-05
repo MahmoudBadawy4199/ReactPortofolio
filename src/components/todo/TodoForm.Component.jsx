@@ -12,28 +12,26 @@ const TodoFormComponent = ({ addTodo }) => {
   };
 
   return (
-    <div>
-      <h3 className="text-muted mb-4">Add a TODO</h3>
+    <div className="bg-light border p-4 h-100 m-4 col-5">
+      <h5 className="text-muted mb-4">Lets add a to-do task</h5>
 
       <form onSubmit={handleSubmission}>
-        Title <br />
         <input
+          className="form-control"
+          placeholder="Todo-Title"
           type="text"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <br />
-        Content <br />
         <textarea
+          className="form-control my-3"
+          placeholder="Todo-Description"
           name="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
-        <br />
-        <button className="my-4 btn btn-primary btn-sm px-4" type="submit">
-          Add Todo
-        </button>
+        <button className="my-4 btn btn-dark btn-sm px-4 w-100 py-2" type="submit">Add Todo</button>
       </form>
     </div>
   );
