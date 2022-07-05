@@ -4,19 +4,13 @@ const TodoListComponent = ({ todos, deleteTodo }) => {
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {
         return (
-
-          <div className="d-flex align-items-center border my-3"  key={i}>
-            <ul>
-              <li className=" d-flex">
-                <div className="text">
-                  <p>Title : {todo.title}</p>
-                  <p>Content : {todo.content}</p>
-                </div>
-              </li>
-            </ul>
-            <div className="btn-wrapper mx-5">
-              <button className="btn btn-danger btn-sm" onClick={()=>deleteTodo(i)}>x</button>
+          <div className="d-flex align-items-center border bg-white m-4 " key={i}>
+            <div className="content__wrapper text-start py-3 ps-4 col-10 w-75">
+              <h3 style={{ fontSize: '1.2rem', wordWrap: 'break-word', fontWeight: '600', textTransform: 'capitalize' }} className="pe-4">{todo.title}</h3>
+              <p style={{ wordWrap: 'break-word' }} className="pe-4">{todo.content}</p>
             </div>
+            <button className="btn btn-danger col-2 " onClick={() => deleteTodo(i)}>x</button>
+
           </div>
         );
       })
@@ -25,8 +19,8 @@ const TodoListComponent = ({ todos, deleteTodo }) => {
     );
 
   return (
-    <div className="text-left">
-      <h5 className="mx-5 text-muted">Todos List</h5>
+    <div className="text-left bg-light border my-4 col-6">
+      <h5 className="text-muted my-4">Todos List</h5>
       {todosList}
     </div>
   );
