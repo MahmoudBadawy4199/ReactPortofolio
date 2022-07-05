@@ -25,7 +25,7 @@ const SignUp = () => {
         <div className="container  px-3 py-1">
 
             {/* FORM START */}
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className="bg-light p-4 border d-flex flex-column">
                 {/* USER NAME INPUT START */}
                 <div className="username-wrapper my-3">
                     <input name="username" placeholder="username" className="form-control" type="text" {...register("username", { required: true, maxLength: 20 })} />
@@ -150,7 +150,7 @@ const SignUp = () => {
                 </div>
                 {/* HOBBIES INPUT END */}
 
-                <button className="btn btn-primary btn-lg" type="submit">Submit</button>
+                <button className="btn btn-dark btn-md px-4 m-auto py-2 mt-2" type="submit">Submit</button>
             </form>
 
 

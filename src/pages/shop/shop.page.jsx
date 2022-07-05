@@ -21,8 +21,6 @@ const ShopPage = () => {
     return (
         <div className="container">
             <div className="products__wrapper text-center">
-                <h1 className="my-3">Shop</h1>
-
                 {
                    !loading ? (
 
@@ -30,9 +28,9 @@ const ShopPage = () => {
                             {
                                 products.map((item, i) => {
                                     return (
-                                        <Link to={`/product/${item.id}`} key={i} className="products__item d-flex align-items-center">
-                                            <img className='w-25' src={item.image} alt="img" />
-                                            <h3>{item.title}</h3>
+                                        <Link to={`/product/${item.id}`} key={i} className="products__item d-flex align-items-center my-2 bg-light border">
+                                            <img className='w-25 p-4' src={item.image} alt="img" />
+                                            <h3 className='px-3'>{item.title}</h3>
                                         </Link>
                                     )
                                 }
